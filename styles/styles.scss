@@ -1,5 +1,6 @@
 $mainFont: 'Roboto', sans-serif;
 $black:#1d1d1d;
+$white:white;
 
 * {
     margin: 0;
@@ -13,6 +14,7 @@ $black:#1d1d1d;
     margin: 0 auto;
     padding: 0 20px;
   }
+  //header
   .header-first{
       padding: 30px 0;
   }
@@ -21,8 +23,13 @@ $black:#1d1d1d;
     margin: 0 auto;
     padding: 0 20px;
   }
+  header{
+    background-color: $white;
+    position: sticky;
+    top: 0;
+  }
   .header-wrapper{
-    border-top: .5rem solid $black;
+    border-top: .5rem solid black;
   }
   h1{
     font-weight: 700;
@@ -57,8 +64,116 @@ $black:#1d1d1d;
     color: $black;
     text-transform: uppercase;
     font-size: .9rem;
-    font-weight: 900;
+    font-weight: 700;
     font-family: $mainFont;
     letter-spacing: 2px;
     }
+  }
+
+  //main
+
+  .product-img{
+    width:100%;
+  }
+  @mixin img-container {
+    background-position:center center;
+    background-size:cover;
+    height: 418px;
+  }
+  .img-container1{
+    background-image: url(../assets/img/winter.jpg);
+    @include img-container();
+  }
+  .img-container2{
+    background-image: url(../assets/img/glasses.jpg);
+    @include img-container();
+  }
+  .img-container3{
+    background-image: url(../assets/img/CHANEL_GABRIELLE.jpg);
+    @include img-container();
+  }
+  .img-container4{
+    background-image: url(../assets/img/ONE_hp_corpo_desk.jpg);
+    @include img-container();
+  }
+  .img-container5{
+    background-image: url(../assets/img/clock.jpg);
+    @include img-container();
+  }
+  .img-container6{
+    background-image: url(../assets/img/flower.jpg);
+    @include img-container();
+  }
+  .img-container7{
+    background-image: url(../assets/img/jewerly.jpg);
+    @include img-container();
+  }
+  .img-container8{
+    background-image: url(../assets/img/HP_CORPO_ONE.jpg);
+    @include img-container();
+  }
+  .img-container9{
+    background-image: url(../assets/img/wedding.jpg);
+    @include img-container();
+  }
+  .img-container10{
+    background-image: url(../assets/img/BA-HP-ONE-DESK.jpg);
+    @include img-container();
+  }
+  .product-container1,.product-container2,.product-container3,.product-container4,.product-container5,.product-container6,.product-container7,.product-container8,.product-container9,.product-container10{
+    padding-top: 240px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+ 
+
+  //product font styles
+  @mixin productFont {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $mainFont;
+    font-weight: 700;
+  }
+  .product-small{
+    @include productFont();
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    font-size: .75rem;
+    letter-spacing: .0625rem;
+
+    
+  }
+  .product-title{
+    @include productFont();
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    font-size: 1.875rem;
+    margin: 20px 0;
+  }
+  .product-btn--white{
+    @include productFont();
+    display: block;
+    background-color: $white;
+    border-color: $white;
+    width: 120px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: $black !important;
+    font-size: .75rem;
+    letter-spacing: .0625rem;
+    margin: 0 auto;
+  }
+  .btn-transparent{
+    @include productFont();
+    display: block;
+    background-color: transparent;
+    border:2px solid $white;
+    width: 120px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: $white !important;
+    font-size: .75rem;
+    letter-spacing: .0625rem;
+    margin: 0 auto;
   }
