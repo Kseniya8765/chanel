@@ -164,8 +164,8 @@ h1 {
 }
 
 .product-container1, .product-container2, .product-container3, .product-container4, .product-container5, .product-container6, .product-container7, .product-container8, .product-container9, .product-container10 {
-  padding-top: 240px;
-  max-width: 700px;
+  padding-top: 200px;
+  max-width: 580px;
   margin: 0 auto;
 }
 
