@@ -228,4 +228,92 @@ h1 {
   letter-spacing: .0625rem;
   margin: 0 auto;
 }
+
+.pannel-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 68px 0;
+}
+
+.pannel {
+  max-width: 400px;
+}
+
+.pannel input {
+  margin-top: 40px;
+}
+
+.pannel-title {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #1d1d1d;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.pannel-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  color: #767676;
+  letter-spacing: .00625rem;
+}
+
+.pannel-text a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  color: #767676;
+  letter-spacing: .00625rem;
+  text-decoration: underline;
+}
+
+.panel-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+.panel-contact a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  color: #1d1d1d;
+  letter-spacing: .00625rem;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+#search, #email {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #767676;
+  max-width: 226px;
+  width: 100%;
+}
+
+.geolocation {
+  color: #1d1d1d;
+  margin-left: 20px;
+}
+
+.geolocation:hover {
+  color: #1d1d1d;
+}
+
+.pannel-submit-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  color: #767676;
+}
 /*# sourceMappingURL=styles.css.map */
