@@ -243,3 +243,60 @@ $gray:#767676;
     font-size: .7rem;
     color: $gray;
   }
+
+  //footer
+  .footer{
+    background-color: black;
+  }
+
+  .footer-nav h2{
+    @include productFont();
+    text-align: left;
+    font-size: .875rem;
+    padding: 58px 0 18px 0;
+  }
+  .footer-nav li{
+    margin-bottom: 10px;
+  }
+  .footer-nav a{
+    font-family: $mainFont;
+    font-size: .875rem;
+    font-weight: 100;
+    color: $gray;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  hr{
+    height: 1px;
+    color: $gray;
+    margin:  0;
+  }
+  .social-container{
+    padding: 30px 0 18px 0;
+  }
+  .soc-text{
+    font-family: $mainFont;
+    font-size: .8rem;
+    font-weight: 100;
+    color: $gray;   
+  }
+  .language-modal{
+    font-family: $mainFont;
+    font-size: .8rem;
+    font-weight: 100;
+    color: $white; 
+    margin-left: 10px;
+  }
+.socal-links{
+  display: flex;
+  max-width: 200px;
+  a{
+    margin-right: 10px;
+  }
+}
+.facebook img{
+  width: 20px;
+  height: 20px;
+}

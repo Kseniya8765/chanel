@@ -316,4 +316,75 @@ h1 {
   font-size: .7rem;
   color: #767676;
 }
+
+.footer {
+  background-color: black;
+}
+
+.footer-nav h2 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  font-size: .875rem;
+  padding: 58px 0 18px 0;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  font-family: "Roboto", sans-serif;
+  font-size: .875rem;
+  font-weight: 100;
+  color: #767676;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  height: 1px;
+  color: #767676;
+  margin: 0;
+}
+
+.social-container {
+  padding: 30px 0 18px 0;
+}
+
+.soc-text {
+  font-family: "Roboto", sans-serif;
+  font-size: .8rem;
+  font-weight: 100;
+  color: #767676;
+}
+
+.language-modal {
+  font-family: "Roboto", sans-serif;
+  font-size: .8rem;
+  font-weight: 100;
+  color: white;
+  margin-left: 10px;
+}
+
+.socal-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 200px;
+}
+
+.socal-links a {
+  margin-right: 10px;
+}
+
+.facebook img {
+  width: 20px;
+  height: 20px;
+}
 /*# sourceMappingURL=styles.css.map */
