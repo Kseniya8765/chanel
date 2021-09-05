@@ -10,7 +10,14 @@
   margin: 0 auto;
   padding: 0 20px;
 }
-
+.navbar {
+  padding: 0;
+}
+.navbar-light .navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 0;
+}
 .header-first {
   padding: 30px 0;
 }
@@ -26,10 +33,11 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .header-wrapper {
-  border-top: .5rem solid black;
+  border-top: 0.5rem solid black;
 }
 
 h1 {
@@ -47,18 +55,18 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 0;
-      flex-basis: 0;
+  flex-basis: 0;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .nav-right a {
@@ -75,15 +83,15 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 20px 0;
 }
 
 .header-nav a {
   color: #1d1d1d;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
@@ -176,8 +184,8 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  letter-spacing: .0625rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.0625rem;
 }
 
 .product-title {
@@ -198,6 +206,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   display: block;
+  position: relative;
   background-color: white;
   border-color: white;
   width: 120px;
@@ -205,9 +214,28 @@ h1 {
   line-height: 48px;
   text-align: center;
   color: #1d1d1d !important;
-  font-size: .75rem;
-  letter-spacing: .0625rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.0625rem;
   margin: 0 auto;
+}
+
+.product-btn--white::after {
+  display: none;
+  content: " ";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 1px;
+  background-color: #767676;
+  transition: width 0.7s ease-out;
+}
+.product-btn--white:hover::after {
+  display: block;
+  width: 70px;
+  background-color: #1d1d1d;
 }
 
 .btn-transparent {
@@ -224,15 +252,32 @@ h1 {
   line-height: 48px;
   text-align: center;
   color: white !important;
-  font-size: .75rem;
-  letter-spacing: .0625rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.0625rem;
   margin: 0 auto;
+  position: relative;
 }
-
+.btn-transparent::after {
+  display: none;
+  content: " ";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 1px;
+  transition: width 0.7s ease-out;
+}
+.btn-transparent:hover::after {
+  display: block;
+  width: 70px;
+  background-color: white;
+}
 .pannel-container {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 68px 0;
 }
 
@@ -256,23 +301,35 @@ h1 {
   margin-bottom: 20px;
 }
 
-.pannel-text {
+.pannel-text,
+.policy {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: .875rem;
+  font-size: 0.875rem;
   color: #767676;
-  letter-spacing: .00625rem;
+  letter-spacing: 0.00625rem;
+  line-height: 20px;
 }
 
-.pannel-text a {
+.policy {
+  margin-top: 20px;
+}
+.pannel-text a,
+.policy a {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: .875rem;
+  font-size: 0.875rem;
   color: #767676;
-  letter-spacing: .00625rem;
+  letter-spacing: 0.00625rem;
   text-decoration: underline;
+  transition: 1s;
 }
-
+.pannel-text a:hover {
+  color: #1d1d1d;
+}
+.policy a:hover {
+  color: #1d1d1d;
+}
 .panel-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,21 +340,25 @@ h1 {
 .panel-contact a {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: .875rem;
+  font-size: 0.875rem;
   color: #1d1d1d;
-  letter-spacing: .00625rem;
+  letter-spacing: 0.00625rem;
   text-decoration: underline;
   margin-right: 20px;
 }
 
-#search, #email {
+#search,
+#email {
   outline: none;
   border: none;
   border-bottom: 1px solid #767676;
   max-width: 226px;
   width: 100%;
 }
-
+#search:hover,
+#email:hover {
+  border-bottom: 1px solid #1d1d1d;
+}
 .geolocation {
   color: #1d1d1d;
   margin-left: 20px;
@@ -313,7 +374,7 @@ h1 {
   background-color: transparent;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: #767676;
 }
 
@@ -328,7 +389,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   text-align: left;
-  font-size: .875rem;
+  font-size: 0.875rem;
   padding: 58px 0 18px 0;
 }
 
@@ -338,7 +399,7 @@ h1 {
 
 .footer-nav a {
   font-family: "Roboto", sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 100;
   color: #767676;
 }
@@ -359,14 +420,14 @@ hr {
 
 .soc-text {
   font-family: "Roboto", sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 100;
   color: #767676;
 }
 
 .language-modal {
   font-family: "Roboto", sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 100;
   color: white;
   margin-left: 10px;
@@ -386,5 +447,65 @@ hr {
 .facebook img {
   width: 20px;
   height: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .header-second {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header-search,
+  .header-acc {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px){
+  .img-container1{
+    background-image: url(../assets/img/winterMobile.jpg);
+  }
+  .img-container2{
+    background-image: url(../assets/img/glasses-mobile.jpg);
+  }
+  .img-container4{
+    background-image: url(../assets/img/ONE_hp_corpo_mobile.jpg);
+  }
+  .img-container5{
+    background-image: url(../assets/img/clock-mobile.jpg);
+  }
+  .img-container6{
+    background-image: url(../assets/img/flower-MOBILE.jpg);
+  }
+  .img-container7{
+    background-image: url(../assets/img/jewerly-mobile.png);
+  }
+  .img-container8{
+    background-image: url(../assets/img/MobileHPcorpo.png);
+  }
+  .img-container9{
+    background-image: url(../assets/img/wedding-mobile.jpg);
+  }
+  .img-container10{
+    background-image: url(../assets/img/BA-HP-ONE-MOB.jpg);
+  }
+}
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 25px;
+  }
+  .pannel {
+    margin-bottom: 50px;
+  }
+  .soc-text {
+    text-align: center;
+  }
+  .socal-links {
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .product-title {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
